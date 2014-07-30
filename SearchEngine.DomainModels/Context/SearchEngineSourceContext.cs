@@ -3,8 +3,9 @@ using System.Data.Entity;
 using System.Linq;
 using MilyutkinI.Repository.Contracts;
 using SearchEngine.DomainModels.Extensions;
+using SearchEngine.DomainModels.Models;
 
-namespace SearchEngine.DomainModels.Models
+namespace SearchEngine.DomainModels.Context
 {
     public class SearchEngineSourceContext : DbContext, ISourceContext
     {

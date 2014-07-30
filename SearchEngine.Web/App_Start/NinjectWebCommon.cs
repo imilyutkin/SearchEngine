@@ -1,5 +1,5 @@
 using MilyutkinI.Repository.Contracts;
-using SearchEngine.DomainModels.Models;
+using SearchEngine.DomainModels.Context;
 using SearchEngine.Repositories.Contracts;
 using SearchEngine.Repositories.Impl;
 
