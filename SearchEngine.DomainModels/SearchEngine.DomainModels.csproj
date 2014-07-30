@@ -50,6 +50,10 @@
   <ItemGroup>
     <Compile Include="Context\SearchEngineSourceContext.cs" />
     <Compile Include="Extensions\DbSetExtension.cs" />
+    <Compile Include="Migrations\201407302213351_Init.cs" />
+    <Compile Include="Migrations\201407302213351_Init.Designer.cs">
+      <DependentUpon>201407302213351_Init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Url.cs" />
@@ -65,7 +69,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201407302213351_Init.resx">
+      <DependentUpon>201407302213351_Init.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

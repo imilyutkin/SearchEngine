@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration.Configuration;
 
 namespace SearchEngine.DomainModels.Models
 {
@@ -11,6 +13,7 @@ namespace SearchEngine.DomainModels.Models
             set;
         }
 
+        [MaxLength(100)]
         [Index(IsUnique = true)]
         public String Address
         {
