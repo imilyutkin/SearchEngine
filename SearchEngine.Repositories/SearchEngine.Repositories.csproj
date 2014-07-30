@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\ILinkRepository.cs" />
+    <Compile Include="Contracts\IUrlRepository.cs" />
+    <Compile Include="Impl\LinkRepository.cs" />
+    <Compile Include="Impl\UrlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
