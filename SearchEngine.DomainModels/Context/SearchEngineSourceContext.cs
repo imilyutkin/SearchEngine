@@ -9,7 +9,7 @@ namespace SearchEngine.DomainModels.Context
 {
     public class SearchEngineSourceContext : DbContext, ISourceContext
     {
-        protected SearchEngineSourceContext() : base("DefaultConnection")
+        public SearchEngineSourceContext() : base("DefaultConnection")
         {
         }
 
