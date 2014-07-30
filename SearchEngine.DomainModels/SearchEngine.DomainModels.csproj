@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Context\SearchEngineSourceContext.cs" />
     <Compile Include="Extensions\DbSetExtension.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Url.cs" />
     <Compile Include="Models\UrlLink.cs" />
