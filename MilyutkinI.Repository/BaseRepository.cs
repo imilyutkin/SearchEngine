@@ -10,18 +10,18 @@ namespace MilyutkinI.Repository
     /// <typeparam name="TEntity">The type of the entity.</typeparam>
     public abstract class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {
-        protected BaseRepository(IContext context)
+        protected BaseRepository(ISourceContext sourceContext)
         {
-            Context = context;
+            SourceContext = sourceContext;
         }
 
         /// <summary>
-        /// Gets the context.
+        /// Gets the sourceContext.
         /// </summary>
         /// <value>
-        /// Context to work with db.
+        /// sourceContext to work with db.
         /// </value>
-        protected IContext Context
+        protected ISourceContext SourceContext
         {
             get;
             set;
@@ -34,7 +34,7 @@ namespace MilyutkinI.Repository
         /// <returns></returns>
         public TEntity Save(TEntity entity)
         {
-            return Context.Save(entity) as TEntity;
+            return SourceContext.Save(entity) as TEntity;
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace MilyutkinI.Repository
         /// <returns></returns>
         public TEntity Load(TEntity entity)
         {
-            return Context.Load<TEntity>(entity.Id);
+            return SourceContext.Load<TEntity>(entity.Id);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace MilyutkinI.Repository
         /// <returns></returns>
         public TEntity Update(TEntity entity)
         {
-            return Context.Update(entity);
+            return SourceContext.Update(entity);
          }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace MilyutkinI.Repository
         /// <param name="entity">The entity.</param>
         public void Delete(TEntity entity)
         {
-            Context.Delete(entity);
+            SourceContext.Delete(entity);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace MilyutkinI.Repository
         /// <returns></returns>
         public IQueryable<TEntity> GetAll()
         {
-            return Context.GetAll<TEntity>();
+            return SourceContext.GetAll<TEntity>();
         }
 
         /// <summary>

@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IContext.cs" />
+    <Compile Include="Contracts\ISourceContext.cs" />
     <Compile Include="Contracts\IEntity.cs" />
     <Compile Include="Contracts\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

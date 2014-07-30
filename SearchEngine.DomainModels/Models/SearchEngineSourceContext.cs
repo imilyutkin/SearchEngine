@@ -6,9 +6,9 @@ using SearchEngine.DomainModels.Extensions;
 
 namespace SearchEngine.DomainModels.Models
 {
-    public class SearchEngineContext : DbContext, IContext
+    public class SearchEngineSourceContext : DbContext, ISourceContext
     {
-        protected SearchEngineContext() : base("DefaultConnection")
+        protected SearchEngineSourceContext() : base("DefaultConnection")
         {
         }
 
@@ -42,7 +42,7 @@ namespace SearchEngine.DomainModels.Models
         /// <typeparam name="TSet">The type of the set.</typeparam>
         /// <param name="id">The id.</param>
         /// <returns></returns>
-        TSet IContext.Load<TSet>(int id)
+        TSet ISourceContext.Load<TSet>(int id)
         {
             return Set<TSet>().Find(id);
         }
@@ -56,7 +56,7 @@ namespace SearchEngine.DomainModels.Models
         /// <exception cref="System.NotImplementedException"></exception>
         public TSet Update<TSet>(TSet entity) where TSet : class, IEntity
         {
-            var oldEntity = ((IContext)this).Load<TSet>(entity.Id);
+            var oldEntity = ((ISourceContext)this).Load<TSet>(entity.Id);
             Entry(oldEntity).CurrentValues.SetValues(entity);
             SaveChanges();
             return entity;

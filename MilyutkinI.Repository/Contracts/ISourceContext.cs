@@ -4,9 +4,9 @@ using System.Linq;
 namespace MilyutkinI.Repository.Contracts
 {
     /// <summary>
-    /// Interface to Context IContext
+    /// Interface to sourceContext ISourceContext
     /// </summary>
-    public interface IContext
+    public interface ISourceContext
     {
         /// <summary>
         /// Saves the specified entity.
