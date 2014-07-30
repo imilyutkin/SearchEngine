@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Web", "SearchE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.DomainModels", "SearchEngine.DomainModels\SearchEngine.DomainModels.csproj", "{A4B57741-66DA-4B53-BC36-1013F98F7077}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilyutkinI.Repository", "MilyutkinI.Repository\MilyutkinI.Repository.csproj", "{CA244709-BB4A-4EC5-95B3-AE2233C630D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
