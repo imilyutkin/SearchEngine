@@ -170,6 +170,20 @@
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MilyutkinI.Repository\MilyutkinI.Repository.csproj">
+      <Project>{CA244709-BB4A-4EC5-95B3-AE2233C630D0}</Project>
+      <Name>MilyutkinI.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine.DomainModels\SearchEngine.DomainModels.csproj">
+      <Project>{A4B57741-66DA-4B53-BC36-1013F98F7077}</Project>
+      <Name>SearchEngine.DomainModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine.Repositories\SearchEngine.Repositories.csproj">
+      <Project>{2A6F4314-3E31-4F6A-9417-6F270452C8DB}</Project>
+      <Name>SearchEngine.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

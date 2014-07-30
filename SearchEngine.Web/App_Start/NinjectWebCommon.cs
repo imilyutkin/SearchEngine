@@ -1,3 +1,8 @@
+using MilyutkinI.Repository.Contracts;
+using SearchEngine.DomainModels.Models;
+using SearchEngine.Repositories.Contracts;
+using SearchEngine.Repositories.Impl;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SearchEngine.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(SearchEngine.Web.App_Start.NinjectWebCommon), "Stop")]
 
@@ -61,6 +66,9 @@ namespace SearchEngine.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<ISourceContext>().To<SearchEngineSourceContext>();
+            kernel.Bind<IUrlRepository>().To<UrlRepository>();
+            kernel.Bind<ILinkRepository>().To<LinkRepository>();
         }        
     }
 }
