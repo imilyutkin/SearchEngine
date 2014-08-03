@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using SearchEngine.DomainModels.Models;
 using SearchEngine.Repositories.Contracts;
+using WebGrease.Css.Extensions;
 
 namespace SearchEngine.Web.Controllers
 {
@@ -20,14 +21,17 @@ namespace SearchEngine.Web.Controllers
         //
         // GET: /Home/
 
+        [HttpGet]
         public ActionResult Index()
         {
-            UrlRepository.Save(new Url
-            {
-                Title = "tut",
-                Address = "http://tut.by"
-            });
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(String urlToProcess)
+        {
+            var s = urlToProcess;
+            return View("Index");
         }
 
     }

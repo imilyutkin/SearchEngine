@@ -6,3 +6,12 @@
 }
 
 <h2>title</h2>
+
+@using (@Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+
+    @Html.TextBox("urlToProcess")
+
+    <input type="submit" value="Crawl"/>
+}
+
