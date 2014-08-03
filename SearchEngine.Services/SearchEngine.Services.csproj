@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IUrlMatchService.cs" />
     <Compile Include="Matchers\IMatchRule.cs" />
+    <Compile Include="Impl\UrlMatchService.cs" />
     <Compile Include="Matchers\ITrimRule.cs" />
     <Compile Include="Matchers\UrlStartsWithMatchRule.cs" />
     <Compile Include="Matchers\UrlNotMatchException.cs" />
