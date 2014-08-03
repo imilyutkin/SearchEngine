@@ -39,12 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Matchers\IMatchRule.cs" />
+    <Compile Include="Matchers\ITrimRule.cs" />
+    <Compile Include="Matchers\UrlStartsWithMatchRule.cs" />
+    <Compile Include="Matchers\UrlNotMatchException.cs" />
+    <Compile Include="Matchers\UrlTrimAfterRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Impl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
