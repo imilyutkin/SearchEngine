@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Web", "SearchE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Services", "SearchEngine.Services\SearchEngine.Services.csproj", "{91C0E422-8939-4053-BA6B-8DA65E29026B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Tests", "SearchService.Tests\SearchService.Tests.csproj", "{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
