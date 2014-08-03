@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Repositories",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Web", "SearchEngine.Web\SearchEngine.Web.csproj", "{BCB484F6-495F-4254-96D4-3BC993FDDC3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Services", "SearchEngine.Services\SearchEngine.Services.csproj", "{91C0E422-8939-4053-BA6B-8DA65E29026B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
