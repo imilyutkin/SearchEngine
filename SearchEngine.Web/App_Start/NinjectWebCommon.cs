@@ -1,7 +1,10 @@
+using System.Configuration;
 using MilyutkinI.Repository.Contracts;
+using Neo4jClient;
 using SearchEngine.DomainModels.Context;
 using SearchEngine.Repositories.Contracts;
 using SearchEngine.Repositories.Impl;
+using SearchEngine.Repositories.neo4j.Impl;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SearchEngine.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(SearchEngine.Web.App_Start.NinjectWebCommon), "Stop")]
@@ -69,6 +72,13 @@ namespace SearchEngine.Web.App_Start
             kernel.Bind<ISourceContext>().To<SearchEngineSourceContext>();
             kernel.Bind<IUrlRepository>().To<UrlRepository>();
             kernel.Bind<ILinkRepository>().To<LinkRepository>();
+            kernel.Bind<IGraphClient>().ToMethod(context =>
+            {
+                var client =
+                    new GraphClient(new Uri(ConfigurationManager.ConnectionStrings["neo4jConnectionString"].Name));
+                client.Connect();
+                return client;
+            }).InSingletonScope();
         }        
     }
 }
