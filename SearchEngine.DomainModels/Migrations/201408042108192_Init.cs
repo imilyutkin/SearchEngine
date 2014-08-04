@@ -12,14 +12,11 @@ namespace SearchEngine.DomainModels.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        From_Id = c.Int(),
-                        To_Id = c.Int(),
+                        Source_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Urls", t => t.From_Id)
-                .ForeignKey("dbo.Urls", t => t.To_Id)
-                .Index(t => t.From_Id)
-                .Index(t => t.To_Id);
+                .ForeignKey("dbo.Urls", t => t.Source_Id)
+                .Index(t => t.Source_Id);
             
             CreateTable(
                 "dbo.Urls",
@@ -28,19 +25,22 @@ namespace SearchEngine.DomainModels.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                         Address = c.String(maxLength: 100),
+                        UrlLink_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .Index(t => t.Address, unique: true);
+                .ForeignKey("dbo.UrlLinks", t => t.UrlLink_Id)
+                .Index(t => t.Address, unique: true)
+                .Index(t => t.UrlLink_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.UrlLinks", "To_Id", "dbo.Urls");
-            DropForeignKey("dbo.UrlLinks", "From_Id", "dbo.Urls");
+            DropForeignKey("dbo.UrlLinks", "Source_Id", "dbo.Urls");
+            DropForeignKey("dbo.Urls", "UrlLink_Id", "dbo.UrlLinks");
+            DropIndex("dbo.Urls", new[] { "UrlLink_Id" });
             DropIndex("dbo.Urls", new[] { "Address" });
-            DropIndex("dbo.UrlLinks", new[] { "To_Id" });
-            DropIndex("dbo.UrlLinks", new[] { "From_Id" });
+            DropIndex("dbo.UrlLinks", new[] { "Source_Id" });
             DropTable("dbo.Urls");
             DropTable("dbo.UrlLinks");
         }

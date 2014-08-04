@@ -50,9 +50,9 @@
   <ItemGroup>
     <Compile Include="Context\SearchEngineSourceContext.cs" />
     <Compile Include="Extensions\DbSetExtension.cs" />
-    <Compile Include="Migrations\201407302213351_Init.cs" />
-    <Compile Include="Migrations\201407302213351_Init.Designer.cs">
-      <DependentUpon>201407302213351_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201408042108192_Init.cs" />
+    <Compile Include="Migrations\201408042108192_Init.Designer.cs">
+      <DependentUpon>201408042108192_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity.cs" />
@@ -70,8 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201407302213351_Init.resx">
-      <DependentUpon>201407302213351_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201408042108192_Init.resx">
+      <DependentUpon>201408042108192_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

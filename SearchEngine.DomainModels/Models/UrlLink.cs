@@ -1,14 +1,16 @@
-﻿namespace SearchEngine.DomainModels.Models
+﻿using System.Collections.Generic;
+
+namespace SearchEngine.DomainModels.Models
 {
     public class UrlLink : Entity
     {
-        public Url From
+        public Url Source
         {
             get;
             set;
         }
 
-        public Url To
+        public List<Url> Links
         {
             get;
             set;

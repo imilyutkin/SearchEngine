@@ -13,7 +13,7 @@ namespace SearchEngine.DomainModels.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201407302213351_Init"; }
+            get { return "201408042108192_Init"; }
         }
         
         string IMigrationMetadata.Source
