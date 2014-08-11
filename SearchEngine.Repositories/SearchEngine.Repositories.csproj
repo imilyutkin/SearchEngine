@@ -60,6 +60,8 @@
     <Compile Include="Impl\LinkRepository.cs" />
     <Compile Include="Impl\UrlRepository.cs" />
     <Compile Include="neo4j\Contracts\IGraphRepository.cs" />
+    <Compile Include="neo4j\Contracts\ILinkNodeRepository.cs" />
+    <Compile Include="neo4j\Impl\LinkNodeRepository.cs" />
     <Compile Include="neo4j\Impl\Neo4jRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

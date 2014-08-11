@@ -4,6 +4,7 @@ using Neo4jClient;
 using SearchEngine.DomainModels.Context;
 using SearchEngine.Repositories.Contracts;
 using SearchEngine.Repositories.Impl;
+using SearchEngine.Repositories.neo4j.Contracts;
 using SearchEngine.Repositories.neo4j.Impl;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SearchEngine.Web.App_Start.NinjectWebCommon), "Start")]
@@ -79,6 +80,7 @@ namespace SearchEngine.Web.App_Start
                 client.Connect();
                 return client;
             }).InSingletonScope();
+            kernel.Bind<ILinkNodeRepository>().To<LinkNodeRepository>();
         }        
     }
 }
