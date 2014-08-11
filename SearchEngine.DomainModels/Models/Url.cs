@@ -20,5 +20,12 @@ namespace SearchEngine.DomainModels.Models
             get;
             set;
         }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid UId
+        {
+            get;
+            set;
+        }
     }
 }

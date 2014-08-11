@@ -54,6 +54,10 @@
     <Compile Include="Migrations\201408042108192_Init.Designer.cs">
       <DependentUpon>201408042108192_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408112248117_AddUIdToUrl.cs" />
+    <Compile Include="Migrations\201408112248117_AddUIdToUrl.Designer.cs">
+      <DependentUpon>201408112248117_AddUIdToUrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Url.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201408042108192_Init.resx">
       <DependentUpon>201408042108192_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408112248117_AddUIdToUrl.resx">
+      <DependentUpon>201408112248117_AddUIdToUrl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
