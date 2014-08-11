@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Reflection;
 using Neo4jClient;
+using SearchEngine.DomainModels.Neo4jModels;
 using SearchEngine.DomainModels.Neo4jModels.Attributes;
 using SearchEngine.Repositories.neo4j.Contracts;
 
 namespace SearchEngine.Repositories.neo4j.Impl
 {
-    public abstract class Neo4JRepository<TNode> : IGraphRepository<TNode> where TNode: class 
+    public abstract class Neo4JRepository<TNode> : IGraphRepository<TNode> where TNode : BaseNode 
     {
         protected IGraphClient Client;
 

@@ -63,6 +63,7 @@
     <Compile Include="Models\Url.cs" />
     <Compile Include="Models\UrlLink.cs" />
     <Compile Include="Neo4jModels\Attributes\NodeNameAttribute.cs" />
+    <Compile Include="Neo4jModels\BaseNode.cs" />
     <Compile Include="Neo4jModels\LinkNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
