@@ -75,7 +75,7 @@ namespace SearchEngine.Web.App_Start
             kernel.Bind<IGraphClient>().ToMethod(context =>
             {
                 var client =
-                    new GraphClient(new Uri(ConfigurationManager.ConnectionStrings["neo4jConnectionString"].Name));
+                    new GraphClient(new Uri(ConfigurationManager.ConnectionStrings["neo4jConnectionString"].ConnectionString));
                 client.Connect();
                 return client;
             }).InSingletonScope();
