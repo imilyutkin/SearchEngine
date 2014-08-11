@@ -10,5 +10,7 @@ namespace SearchEngine.Repositories.neo4j.Contracts
         IEnumerable<TNode> Get(Predicate<TNode> predicate);
 
         IEnumerable<TNode> GetAll();
+
+        void Delete(Predicate<TNode> predicate);
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Reflection;
 using Neo4jClient;
 using SearchEngine.DomainModels.Neo4jModels.Attributes;
@@ -46,6 +45,15 @@ namespace SearchEngine.Repositories.neo4j.Impl
         public IEnumerable<TNode> GetAll()
         {
             return Client.Cypher.Match(String.Format(GetAllTemplate, TypeName)).Return(node => node as TNode).Results;
+        }
+
+        public void Delete(Predicate<TNode> predicate)
+        {
+            Client.Cypher
+                .Match(String.Format(GetAllTemplate, TypeName))
+                .Where<TNode>(node => predicate(node))
+                .Delete("node")
+                .ExecuteWithoutResults();
         }
     }
 }
