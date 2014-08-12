@@ -19,12 +19,6 @@ namespace SearchEngine.DomainModels.Context
             set;
         }
 
-        public DbSet<UrlLink> Links
-        {
-            get;
-            set;
-        }
-
         /// <summary>
         /// Saves the specified entity.
         /// </summary>

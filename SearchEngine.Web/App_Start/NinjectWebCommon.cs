@@ -72,7 +72,6 @@ namespace SearchEngine.Web.App_Start
         {
             kernel.Bind<ISourceContext>().To<SearchEngineSourceContext>();
             kernel.Bind<IUrlRepository>().To<UrlRepository>();
-            kernel.Bind<ILinkRepository>().To<LinkRepository>();
             kernel.Bind<IGraphClient>().ToMethod(context =>
             {
                 var client =
