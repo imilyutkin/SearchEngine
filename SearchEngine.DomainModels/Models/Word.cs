@@ -5,30 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SearchEngine.DomainModels.Models
 {
-    public class Url : Entity
+    public class Word : Entity
     {
-        public String Title
-        {
-            get;
-            set;
-        }
-
         [MaxLength(100)]
         [Index(IsUnique = true)]
-        public String Address
+        public String Label
         {
             get;
             set;
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid UId
-        {
-            get;
-            set;
-        }
-
-        public IList<Word> Words
+        public IList<Url> Urls
         {
             get;
             set;

@@ -13,7 +13,24 @@ namespace SearchEngine.DomainModels.Context
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Word>().HasMany(x => x.Urls).WithMany(x => x.Words).Map(x =>
+            {
+                x.ToTable("WordLinks");
+                x.MapLeftKey("UrlId");
+                x.MapRightKey("WordId");
+            });
+        }
+
         public DbSet<Url> Urls
+        {
+            get;
+            set;
+        }
+
+        public DbSet<Word> Words
         {
             get;
             set;

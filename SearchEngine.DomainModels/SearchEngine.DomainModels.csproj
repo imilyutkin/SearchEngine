@@ -62,9 +62,14 @@
     <Compile Include="Migrations\201408121413498_RemoveTableUrlsLink.Designer.cs">
       <DependentUpon>201408121413498_RemoveTableUrlsLink.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408241326464_AddWordTable.cs" />
+    <Compile Include="Migrations\201408241326464_AddWordTable.Designer.cs">
+      <DependentUpon>201408241326464_AddWordTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Url.cs" />
+    <Compile Include="Models\Word.cs" />
     <Compile Include="Neo4jModels\Attributes\NodeNameAttribute.cs" />
     <Compile Include="Neo4jModels\BaseNode.cs" />
     <Compile Include="Neo4jModels\LinkNode.cs" />
@@ -88,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408121413498_RemoveTableUrlsLink.resx">
       <DependentUpon>201408121413498_RemoveTableUrlsLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408241326464_AddWordTable.resx">
+      <DependentUpon>201408241326464_AddWordTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
