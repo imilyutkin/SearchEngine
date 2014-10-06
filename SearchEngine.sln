@@ -1,7 +1,56 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A56AF378-154D-4133-A819-7C45F7B3AC58}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.DomainModels", "SearchEngine.DomainModels\SearchEngine.DomainModels.csproj", "{A4B57741-66DA-4B53-BC36-1013F98F7077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilyutkinI.Repository", "MilyutkinI.Repository\MilyutkinI.Repository.csproj", "{CA244709-BB4A-4EC5-95B3-AE2233C630D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Repositories", "SearchEngine.Repositories\SearchEngine.Repositories.csproj", "{2A6F4314-3E31-4F6A-9417-6F270452C8DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Web", "SearchEngine.Web\SearchEngine.Web.csproj", "{BCB484F6-495F-4254-96D4-3BC993FDDC3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Services", "SearchEngine.Services\SearchEngine.Services.csproj", "{91C0E422-8939-4053-BA6B-8DA65E29026B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Tests", "SearchService.Tests\SearchService.Tests.csproj", "{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B57741-66DA-4B53-BC36-1013F98F7077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA244709-BB4A-4EC5-95B3-AE2233C630D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6F4314-3E31-4F6A-9417-6F270452C8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6F4314-3E31-4F6A-9417-6F270452C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6F4314-3E31-4F6A-9417-6F270452C8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6F4314-3E31-4F6A-9417-6F270452C8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB484F6-495F-4254-96D4-3BC993FDDC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C0E422-8939-4053-BA6B-8DA65E29026B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFA67C1-EA51-42F7-959B-CCC8ED9A1E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
